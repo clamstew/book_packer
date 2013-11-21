@@ -1,0 +1,52 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="small-3 columns">
+    <%= f.label :title, "Title:", class: "right inline" %>
+    </div>
+    <div class="small-9 columns"><%= f.text_field :title %></div>
+  </div>
+
+  <div class="row">
+    <div class="small-3 columns">
+    <%= f.label :author, "Author:", class: "right inline" %>
+    </div>
+    <div class="small-9 columns"><%= f.text_field :author %></div>
+  </div>
+
+  <div class="row">
+    <div class="small-3 columns">
+    <%= f.label :price, "Price:", class: "right inline" %>
+    </div>
+    <div class="small-9 columns"><%= f.text_field :price %></div>
+  </div>
+
+  <div class="row">
+    <div class="small-3 columns">
+    <%= f.label :isn10, "ISBN-10:", class: "right inline" %>
+    </div>
+    <div class="small-9 columns"><%= f.text_field :isbn10 %></div>
+  </div>
+
+  <div class="row">
+    <div class="small-3 columns">
+    <%= f.label :shipping_weight, "Shipping Weight:", class: "right inline" %>
+    </div>
+    <div class="small-9 columns"><%= f.text_field :shipping_weight %></div>
+  </div>
+  
+  <div class="row">
+    <div class="small-9 small-offset-3 columns"><%= f.submit %></div>
+  </div>
+<% end %>
