@@ -21,6 +21,8 @@ class Box
 #   # Loop through each book weight and add to box is weight is less than 10 pounds
   def box_books
     @book_weights.each do |weight|
+      if box_weight <= 10
+        
       # @TODO NEED TO FINISH
   end
   # def intialize 
