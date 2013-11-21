@@ -32,6 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'nokogiri'
 gem 'hirb'
 gem 'pg'
 gem 'active_model_serializers'
