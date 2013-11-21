@@ -7,6 +7,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav class="top-bar">
+	  <ul class="title-area">
+	    <li class="name">
+	      <h1><%= link_to "Book Packer", books_path %></h1>
+	    </li>
+	  </ul>
+	  <section class="top-bar-section">
+	    <ul class="right">
+	      <li class="divider"></li>
+	      <li><%= link_to "Browse Books", books_path %></li>
+	    </ul>
+	  </div>
+	</nav>
 
 <%= yield %>
 
