@@ -1,0 +1,11 @@
+1. With the Nokogiri gem, you can open an HTML file whether it's local or on the web. From there you could create a new rake task with the specific domain. Ypu'd need to change what CSS selectors you are looking for since most likely two domains with not have the same HTML format.
+
+2. If you were looking for other products not on amazon, then you would need to change the URL that Nokogiri is opening as well as the CSS selectors you are looking for on that specific page.
+
+If you are looking for data on other products on Amazon, then you would most likely be able to use the same CSS selectors since most of their pages are formatted the same. The best way would to text.match the specific fields you are looking to scrape. For example, the productDetailsTable isn't always in the same order, so you can't always look for the 4th item in the list as your shipping weight.
+
+3. First, I would look into other ways to scrape data faster. I used Nokogiri because I knew it was something that would work but never looking into the speed.
+Second, I would break down the list of 2,000,000 books into smaller tasks. Along with seaparting into smaller tasks, I would try to ship the books as they were being scraped to save time instead of doing each task indiviudally.
+
+
+
